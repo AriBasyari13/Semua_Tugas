@@ -1,0 +1,20 @@
+<h1>Comment#new</h1>
+<p>Find me in app/views/comment/new.html.erb</p>
+
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :article_id %>
+  <p>
+    <%= f.label :user_is %><br />
+    <%= f.text_field :user_is %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+<%= link_to "back to article",@comment.article %>

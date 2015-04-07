@@ -1,0 +1,16 @@
+<h1>Posttings#index</h1>
+<p>Find me in app/views/posttings/index.html.erb</p>
+
+<%= link_to 'New Postting', new_postting_path %>
+<h1>Listing POSTTING</h1>
+	<% @posttings.each do |postting| %>
+		<div class="postting"><%=link_to image_tag(postting.picture.url(:thumb)), postting.picture.url(:original), class: "fancybox"%>
+		<div class="name"><%= postting.title %>
+        <div class="content"><%= postting.content %>
+        <div class="actions"><%= link_to "edit", edit_postting_path(postting) %> || <%= link_to "remove", postting, :confirm => 'Are you sure?', :method => :delete %>
+        	</div>
+        	</div>
+        	</div>
+        	</div>
+    <% end %>
+

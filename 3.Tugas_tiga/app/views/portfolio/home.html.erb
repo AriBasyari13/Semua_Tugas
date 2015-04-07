@@ -1,0 +1,54 @@
+<%= render 'navigationbar' %>
+<br />
+<br />
+<br />
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+			<ol class="carousel-indicators">
+      			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      			<li data-target="#myCarousel" data-slide-to="1"></li>
+    		</ol>
+    	<!-- Wrapper for slides -->
+    	<div class="carousel-inner" role="listbox">
+      		<div class="item active" align="center">
+        		<%= image_tag("1.jpg", :width => "600" , :height => "500" ) %>
+        		<div class="carousel-caption" >
+          			<h3>Gang Di Kota Bandung</h3>
+        		</div>
+      		</div>
+			<div class="item" align="center">
+        		<%= image_tag("2.jpg", :width => "600" , :height => "500" ) %>
+        		<div class="carousel-caption">
+          			<h3>Bandung Kota Di Gang</h3>
+        		</div>
+      		</div>  
+    	</div>
+    	<!-- Left and right controls -->
+    	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      		<span aria-hidden="true"></span>
+      		<span class="sr-only">Previous</span>
+    	</a>
+    	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      		<span aria-hidden="true"> </span>
+      		<span class="sr-only">Next</span>
+    	</a>
+  		</div>
+	</div>
+	<div class="col-xs-15 col-sm-3 side pull-right sidebar-offcanvas" id="sidebar" role="navigation">
+		<div class="list-group">
+	            <h5>Facebook:riku@gmail.com</h5>
+	            <h5>Twiter:riku@mail.com</h5>
+	            <h5>Telpon:022-232392</h5>
+	            <h5>Alamat:Jl Harapan Bangsano 23,Bandung,Indonesia</h5>
+        </div>
+    </div>       
+	<div class="col-xs-15 col-sm-4 side pull-left sidebar-offcanvas" id="sidebar" role="navigation">
+        <div class="list-group">
+	        	<h4>Hello saya Riku dan saya ini akan lulus dari kuliah,
+	            	salam kenal ya. Berikut contoh hasil desaign grafik yang saya buat :)</h4>
+        </div>
+    </div>
+    </div>
+</div>
+</div>

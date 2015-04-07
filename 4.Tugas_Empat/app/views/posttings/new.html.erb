@@ -1,0 +1,35 @@
+<h1>Posttings#new</h1>
+<p>Find me in app/views/posttings/new.html.erb</p>
+
+<%= form_for(@postting) do |f| %>
+  <% if @postting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postting.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @postting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <!-- Upload your attachments via a simple file_fields in the form -->
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content, cols: 20, rows: 10  %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', posttings_path %>
